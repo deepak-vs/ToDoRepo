@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(50, 45, 45);
+}
+.main{
+    width: 40%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid rgb(193, 183, 183);
+    box-shadow: 1px 1px 5px 5px rgb(7, 6, 6);
+    background-color: rgb(62, 58, 58);    
+    border-radius: 10px;
+}
+h2{
+    margin:5px;
+}
+#input{
+    height: 25px;
+    width: 25vw;
+    margin-bottom: 10px;
+    padding: 3px;
+    font-size: 1rem;
+    color: black;
+    border-radius: 5px;
+    border:none
+}
+#btn{
+    width: 75px;
+    padding: 5px;
+    background-color: black;
+}
+
+.box{
+    width: 90%;
+    height: 75%;
+    padding: 10px;
+    border: 1px solid black;
+}
+.box ul{
+    padding-left:30px;
+    overflow-y: auto;
+    height: 90%;
+}
+li{
+    display: flex;
+    justify-content: space-between;
+}
+#complete{
+    margin-right: 5px;
+    padding: 5px;
+}
+#deleteBtn{
+    color:red;
+    padding: 2px;
+    margin: 5px;
+}
+.todos{
+    font-size: 1.25rem;
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

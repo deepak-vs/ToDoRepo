@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <h2>TODO</h2>
+            <div class="inputBox">
+                <input type="text" name="todo" id="input" placeholder="Add your Todo">
+                <button id='btn'>ADD</button>
+            </div>
+            <div class="box">
+                <ul id="list" style="list-style-type: none;">
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let list=document.getElementById('list')
+        let input=document.getElementById('input')
+        let btn=document.getElementById('btn')
+
+        //function to add todo
+        const addTodo=()=>{
+            let data=input.value;
+            if(data===''){
+                alert("Invalid Data Entered !")
+            }
+            else{
+                let item=document.createElement('li');
+                item.innerHTML=`
+                        <div class="todos">
+                            <input id="complete" type="checkbox">
+                             <span>${data}</span>
+                        </div>
+                        <button id="deleteBtn">Delete</button>
+                     `
+                list.appendChild(item); 
+                input.value=''
+            }
+
+            list.addEventListener("click",(e)=>{
+                if(e.target.tagName=='BUTTON'){
+                    e.target.parentNode.remove();
+                }
+            })
+        }
+
+        btn.addEventListener('click',addTodo)
+    </script>
+    
+</body>
+</html>
